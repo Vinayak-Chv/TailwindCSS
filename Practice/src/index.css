@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  background-color: #10172a;
+}
+
+@theme {
+  --color-chestnut: #782F29
+}
+
+@layer base {
+  h1{
+    @apply text-blue-400
+  }
+}
+
+@layer components {
+  .cards {
+    @apply rounded-full h-15 w-full flex justify-center items-center-safe
+  }
+}
+
+@layer components {
+  .space {
+    @apply my-2
+  }
+}
